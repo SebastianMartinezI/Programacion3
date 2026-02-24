@@ -1,3 +1,18 @@
 Abstraccion
 Que se solicita?
 Un programa que gestione el proceso de validacion de una platafoma
+que informacion es relevante 
+nombre
+edad
+validacion 
+numero de intentos
+
+descomposicion
+Que acciones se requiere?
+ingresar el nombre
+ingresar la edad 
+validar 
+verificar
+
+reutilacion de patrones
+Util con todos los ingresar
