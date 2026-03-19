@@ -24,7 +24,6 @@ defmodule GestionHotel do
     end
   end
 
-  # =========================
 
   def calcular_total(noches, tipo_cliente, temporada)
       when is_integer(noches) and noches > 0 do
@@ -51,27 +50,22 @@ defmodule GestionHotel do
 
   # TARIFA BASE
 
-
   def tarifa_por_noche(noches) when noches <= 2, do: 120_000
   def tarifa_por_noche(noches) when noches <= 5, do: 100_000
   def tarifa_por_noche(noches) when noches > 5, do: 85_000
 
-
-  # DESCUENTOS (USANDO ENTEROS)
-
+  # DESCUENTOS
 
   def calcular_descuento(subtotal, 1), do: subtotal * 0.20
   def calcular_descuento(subtotal, 2), do: subtotal * 0.15
   def calcular_descuento(_, 3), do: 0
   def calcular_descuento(_, _), do: 0
 
-
   # RECARGO
 
   def calcular_recargo(valor, 1), do: valor * 0.25
   def calcular_recargo(_, 2), do: 0
   def calcular_recargo(_, _), do: 0
-
 
 
   def mostrar_mensaje(resultado) do
