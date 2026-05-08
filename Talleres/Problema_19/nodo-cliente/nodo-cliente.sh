@@ -1,0 +1,3 @@
+#!/bin/bash
+
+elixir --sname nodocliente@localhost --cookie my_cookie nodo-cliente.exs

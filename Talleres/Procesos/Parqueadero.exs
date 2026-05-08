@@ -3,20 +3,27 @@ defmodule Parqueadero do
   # MAIN
 
   def main do
-    pid = iniciar(2)   # 2 cupos
+    pid = iniciar(4)   # 4 cupos
 
     send(pid, {:llegar, "🚗 Auto 1"})
     send(pid, {:llegar, "🚗 Auto 2"})
-    send(pid, {:llegar, "🚗 Auto 3"})  # espera
-    send(pid, {:llegar, "🚗 Auto 4"})  # espera
+    send(pid, {:llegar, "🚗 Auto 3"})
+    send(pid, {:llegar, "🚗 Auto 4"})
+    send(pid, {:llegar, "🚗 Auto 5"})  # espera
+    send(pid, {:llegar, "🚗 Auto 6"})  # espera
+    send(pid, {:llegar, "🚗 Auto 7"})  # espera
 
     :timer.sleep(2000)
 
     send(pid, {:salir, "🚗 Auto 1"})
 
-    :timer.sleep(2000)
+    :timer.sleep(3000)
 
     send(pid, {:salir, "🚗 Auto 2"})
+
+    :timer.sleep(3000)
+
+    send(pid, {:salir, "🚗 Auto 3"})
 
     :timer.sleep(2000)
   end
